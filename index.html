@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="cs" spellcheck="false" translate="no">
+  <head>
+    <title>Pozvánka</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      body {
+        background-color: #E8CABC;
+      }
+      #pozvanka {
+        aspect-ratio: 29 / 40;
+        background-image: url('pozvanka.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: 20px ridge #9E665C;
+        margin: 15px auto;
+        max-height: calc(100vh - 30px);
+        max-width: calc(100vw - 30px);
+        position: relative;
+      }
+      #odkaz-lokace {
+        left: 46%;
+      }
+      #odkaz-rsvp {
+        left: 62.5%;
+      }
+      #odkaz-videopozvanka {
+        left: 42%; 
+        top: 37%;
+      }
+      #odkaz-webovka {
+        left: 29.4%;
+      }
+      .kruhovy-odkaz {
+        /*background-color: rgba(0,0,0,0.5);*/
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+      }
+      .maly-odkaz {
+        height: 6.5%;
+        top: 74%;
+        width: 9.2%;
+      }
+      .velky-odkaz {
+        height: 11%;
+        width: 15%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="pozvanka">
+      <a
+        id="odkaz-videopozvanka"
+        class="kruhovy-odkaz velky-odkaz"
+        href="videopozvanka.html"
+      >
+      </a>
+      <a
+        id="odkaz-webovka"
+        class="kruhovy-odkaz maly-odkaz"
+        href="https://google.com"
+        target="_blank"
+      >
+      </a>
+      <a
+        id="odkaz-lokace"
+        class="kruhovy-odkaz maly-odkaz"
+        href="https://www.google.com/maps/place/49%C2%B038'39.9%22N+14%C2%B045'30.2%22E/@49.6444273,14.7583743,17z/data=!3m1!4b1!4m4!3m3!8m2!3d49.6444273!4d14.7583743?entry=ttu"
+        target="_blank"
+      >
+      </a>
+      <a
+        id="odkaz-rsvp"
+        class="kruhovy-odkaz maly-odkaz"
+        href="https://smalandet.se"
+        target="_blank"
+      >
+      </a>
+    </div>
+  </body>
+</html>

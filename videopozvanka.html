@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="cs" spellcheck="false" translate="no">
+  <head>
+    <title>Videopozvánka</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <style>
+      @keyframes reduce-height {
+        from {
+          height: 100vh;
+        }
+        to {
+          height: 80vh;
+        }
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      body {
+        background-color: #E8CABC;
+      }
+      #pozvanka {
+        border: 20px ridge #9E665C;
+        margin: 15px auto;
+        max-height: min(calc(100% - 30px), 2000px);
+        max-width: min(calc(100% - 30px), 1415px);
+      }
+      #pozvanka-wrapper {
+        height: 100vh;
+        width: 100vw;
+      }
+      .reduce-height {
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-name: reduce-height;
+        animation-timing-function: ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="pozvanka-wrapper">
+      <video id="pozvanka" autoplay muted>
+        <source src="pozvanka.mp4" type="video/mp4">
+        <p>
+          Tvůj prohlížeč bohužel nepodporuje mp4 videa...
+          <br>
+          Video stáhneš zde:
+          <a href="pozvanka.mp4" download="pozvanka.mp4">Stáhnout video</a>
+        </p>
+      </video>
+    </div>
+    <script defer type="text/javascript">
+      const pozvanka = document.getElementById('pozvanka');
+      const pozvankaWrapper = document.getElementById('pozvanka-wrapper');
+      pozvanka.onended = (event) => {
+        //pozvankaWrapper.classList.add('reduce-height');
+        setTimeout(function() { window.location.href = 'index.html'; }, 5000);
+      };
+    </script>
+  </body>
+</html>
