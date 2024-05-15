@@ -24,6 +24,7 @@
         background-color: #E8CABC;
       }
       #pozvanka {
+        aspect-ratio: 29 / 40;
         border: 20px ridge #9E665C;
         margin: 15px auto;
         max-height: min(calc(100% - 30px), 2000px);
@@ -43,7 +44,7 @@
   </head>
   <body>
     <div id="pozvanka-wrapper">
-      <video id="pozvanka" autoplay muted>
+      <video id="pozvanka" autobuffer autoplay muted playsinline>
         <source src="pozvanka.mp4" type="video/mp4">
         <p>
           Tvůj prohlížeč bohužel nepodporuje mp4 videa...
@@ -57,7 +58,6 @@
       const pozvanka = document.getElementById('pozvanka');
       const pozvankaWrapper = document.getElementById('pozvanka-wrapper');
       pozvanka.onended = (event) => {
-        //pozvankaWrapper.classList.add('reduce-height');
         setTimeout(function() { window.location.href = 'index.html'; }, 5000);
       };
     </script>
