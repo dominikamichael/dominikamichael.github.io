@@ -15,16 +15,30 @@
       body {
         background-color: #E8CABC;
       }
-      #pozvanka {
-        border: 20px ridge #9E665C;
+      #instrukce {
+        color: #454031;
+        font-family: "Palatino", "Georgia", serif;
+        font-size: 1.1rem;
+        left: 0;
+        overflow: hidden;
+        padding-bottom: 20px;
+        position: absolute;
+        right: 0;
+      }
+      #pozvanka-a-instrukce {
         display: inline-block;
-        margin: 15px auto;
-        max-height: min(calc(100vh - 30px), 2000px);
         max-width: min(calc(100vw - 30px), 1415px);
         position: relative;
       }
+      #pozvanka {
+        border: 20px ridge #9E665C;
+        display: inline-block;
+        margin: 15px 0;
+        max-height: min(calc(90vh - 30px), 2000px);
+        position: relative;
+      }
       #pozvanka img {
-        max-height: min(calc(100vh - 70px), 2000px);
+        max-height: min(calc(90vh - 70px), 2000px);
         max-width: min(calc(100vw - 70px), 1415px);
       }
       #odkaz-lokace {
@@ -57,35 +71,53 @@
     </style>
   </head>
   <body>
-    <div id="pozvanka">
-      <img src="pozvanka.png" alt="Pozvánka">
-      <a
-        id="odkaz-videopozvanka"
-        class="kruhovy-odkaz velky-odkaz"
-        href="videopozvanka.html"
-      >
-      </a>
-      <a
-        id="odkaz-webovka"
-        class="kruhovy-odkaz maly-odkaz"
-        href="https://dominikamichael.svatba.io/cs"
-        target="_blank"
-      >
-      </a>
-      <a
-        id="odkaz-lokace"
-        class="kruhovy-odkaz maly-odkaz"
-        href="https://www.google.com/maps/place/49%C2%B038'39.9%22N+14%C2%B045'30.2%22E/@49.6444273,14.7583743,17z/data=!3m1!4b1!4m4!3m3!8m2!3d49.6444273!4d14.7583743?entry=ttu"
-        target="_blank"
-      >
-      </a>
-      <a
-        id="odkaz-rsvp"
-        class="kruhovy-odkaz maly-odkaz"
-        href="https://dominikamichael.svatba.io/cs#rsvp"
-        target="_blank"
-      >
-      </a>
+    <div id="pozvanka-a-instrukce">
+      <div id="pozvanka">
+        <img src="pozvanka.png" alt="Pozvánka">
+        <a
+          id="odkaz-videopozvanka"
+          class="kruhovy-odkaz velky-odkaz"
+          href="videopozvanka.html"
+        >
+        </a>
+        <a
+          id="odkaz-webovka"
+          class="kruhovy-odkaz maly-odkaz"
+          href="https://dominikamichael.svatba.io/cs"
+          target="_blank"
+        >
+        </a>
+        <a
+          id="odkaz-lokace"
+          class="kruhovy-odkaz maly-odkaz"
+          href="https://www.google.com/maps/place/49%C2%B038'39.9%22N+14%C2%B045'30.2%22E/@49.6444273,14.7583743,17z/data=!3m1!4b1!4m4!3m3!8m2!3d49.6444273!4d14.7583743?entry=ttu"
+          target="_blank"
+        >
+        </a>
+        <a
+          id="odkaz-rsvp"
+          class="kruhovy-odkaz maly-odkaz"
+          href="https://dominikamichael.svatba.io/cs#rsvp"
+          target="_blank"
+        >
+        </a>
+      </div>
+      <p id="instrukce">
+        Milá rodino, přátelé a&nbsp;kamarádi,
+        <br>
+        <br>
+        Touto cestou Vás zveme na&nbsp;náš nejdůležitější den,
+        a&nbsp;to na&nbsp;den plný lásky, slibů a&nbsp;nových začátků.
+        Jak už jistě tušíte, jedná&nbsp;se o&nbsp;náš svatební den.
+        <br>
+        <br>
+        Abychom&nbsp;se trochu odlišili,
+        pozvánku jsme vytvořili v&nbsp;elektronické podobě.
+        <br>
+        <br>
+        Jediný úkol pro&nbsp;Vás je kliknout na&nbsp;pečeť.
+        Dále vše naleznete v&nbsp;pozvánce.
+      </p>
     </div>
   </body>
 </html>
