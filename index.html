@@ -16,15 +16,16 @@
         background-color: #E8CABC;
       }
       #pozvanka {
-        aspect-ratio: 290 / 400;
-        background-image: url('pozvanka.png');
-        background-repeat: no-repeat;
-        background-size: contain;
         border: 20px ridge #9E665C;
+        display: inline-block;
         margin: 15px auto;
         max-height: min(calc(100vh - 30px), 2000px);
         max-width: min(calc(100vw - 30px), 1415px);
         position: relative;
+      }
+      #pozvanka img {
+        max-height: min(calc(100vh - 70px), 2000px);
+        max-width: min(calc(100vw - 70px), 1415px);
       }
       #odkaz-lokace {
         left: 46%;
@@ -57,6 +58,7 @@
   </head>
   <body>
     <div id="pozvanka">
+      <img src="pozvanka.png" alt="Pozvánka">
       <a
         id="odkaz-videopozvanka"
         class="kruhovy-odkaz velky-odkaz"

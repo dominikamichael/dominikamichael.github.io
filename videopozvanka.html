@@ -24,11 +24,15 @@
         background-color: #E8CABC;
       }
       #pozvanka {
-        aspect-ratio: 290 / 400;
         border: 20px ridge #9E665C;
+        display: inline-block;
         margin: 15px auto;
-        max-height: min(calc(100% - 30px), 2000px);
-        max-width: min(calc(100% - 30px), 1415px);
+        max-height: min(calc(100vh - 30px), 2000px);
+        max-width: min(calc(100vw - 30px), 1415px);
+      }
+      #pozvanka-source {
+        max-height: min(calc(100vh - 70px), 2000px);
+        max-width: min(calc(100vw - 70px), 1415px);
       }
       #pozvanka-wrapper {
         height: 100vh;
@@ -45,7 +49,7 @@
   <body>
     <div id="pozvanka-wrapper">
       <video id="pozvanka" autobuffer autoplay muted playsinline>
-        <source src="pozvanka.mp4" type="video/mp4">
+        <source id="pozvanka-source" src="pozvanka.mp4" type="video/mp4">
         <p>
           Tvůj prohlížeč bohužel nepodporuje mp4 videa...
           <br>
