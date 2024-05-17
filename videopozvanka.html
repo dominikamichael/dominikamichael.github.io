@@ -25,7 +25,6 @@
       }
       #pozvanka {
         border: 20px ridge #9E665C;
-        display: inline-block;
         margin: 15px auto;
         max-height: min(calc(100vh - 30px), 2000px);
         max-width: min(calc(100vw - 30px), 1415px);
@@ -35,14 +34,11 @@
         max-width: min(calc(100vw - 70px), 1415px);
       }
       #pozvanka-wrapper {
+        display: inline-flex;
+        flex-direction: column;
         height: 100vh;
+        justify-content: center;
         width: 100vw;
-      }
-      .reduce-height {
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
-        animation-name: reduce-height;
-        animation-timing-function: ease-in-out;
       }
     </style>
   </head>
